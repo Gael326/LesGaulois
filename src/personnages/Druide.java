@@ -34,12 +34,25 @@ public class Druide {
 	}
 	
 
-	public void fabriquerPotion(int quantite, int forcePotion) {
-		Chaudron.remplirChaudron(quantite, forcePotion);
+	public void fabriquerPotion(Chaudron chaudron ,int quantite, int forcePotion) {
+		chaudron.remplirChaudron(quantite, forcePotion);
+		parler("J'ai concocté "+quantite+" doses de potion magique. Elle a une force de "+forcePotion+"." );
 		
 	}
 	
-	public void booster(Gaulois gaulois) {
-		
+	public void booster(Gaulois gaulois, Chaudron chaudron){
+		if(chaudron.contientPotion()) {
+			if (gaulois.getNom()=="Obelix") {
+				parler("Non "+gaulois.getNom()+" Non!... et tu le sais très bien !");
+			}else {
+				chaudron.prendreLouche();
+				gaulois.boirePotion(chaudron.getForcePotion());
+				parler("Tiens "+gaulois.getNom()+" un peu de potion magique.");
+			}
+	}else {
+		parler("Désolé"+gaulois.getNom()+"il n'y a plus une seule goutte de potion");
 	}
-}
+	
+	
+	}
+	}

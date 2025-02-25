@@ -43,9 +43,14 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int coup) {
+		if(force>0) {
 		force-=coup;
 		System.out.println("Aïe");
-	}
+		}else {
+			parler("J'abandonne ! ");
+		}
+		
+		}
 	
 	
 }
