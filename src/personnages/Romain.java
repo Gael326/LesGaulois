@@ -17,6 +17,8 @@ public class Romain {
 		return nom;
 	}
 
+	
+	
 
 	public void setNom(String nom) {
 		this.nom = nom;
@@ -40,4 +42,9 @@ public class Romain {
 		return "Le romain "+ nom + " : ";
 	}
 
+	public void recevoirCoup(int coup) {
+		force-=coup;
+	}
+	
+	
 }
