@@ -26,14 +26,16 @@ public class Druide {
 	}
 	
 	public void parler(String texte) {
-		
+		System.out.println(prendreParole()+"/"+texte+"/");
 	}
 	
 	private String prendreParole() {
-		return "blabla";
+		return "Le druide "+nom+" : ";
 	}
+	
 
 	public void fabriquerPotion(int quantite, int forcePotion) {
+		Chaudron.remplirChaudron(quantite, forcePotion);
 		
 	}
 	
