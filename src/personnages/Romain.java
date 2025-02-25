@@ -44,6 +44,7 @@ public class Romain {
 
 	public void recevoirCoup(int coup) {
 		force-=coup;
+		System.out.println("Aïe");
 	}
 	
 	
